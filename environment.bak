@@ -1,0 +1,2 @@
+PATH="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/usr/local/lib/python2.7/dist-packages/django/bin"
+no_proxy=localhost,127.0.0.0/8,127.0.1.1,127.0.0.1,local.home
