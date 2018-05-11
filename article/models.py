@@ -1,6 +1,7 @@
 from django.db import models
 
 # Create your models here.
+<<<<<<< HEAD
 class Article(models.Model) :
     title = models.CharField(max_length = 100)  #????
     category = models.CharField(max_length = 50, blank = True)  #????
@@ -13,3 +14,5 @@ class Article(models.Model) :
 
     class Meta:  #???????
         ordering = ['-date_time']
+=======
+>>>>>>> 42dfd83f9f6f09c839387cbd5d1f569a97f5373e
