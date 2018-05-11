@@ -1,13 +1,16 @@
-from django.shortcuts import render
-from django.http import HttpResponse
-from article.models import Article
 
-# Create your views here.
-def home(request):
-    return HttpResponse("Hello World, Django")
+from django.db import models
 
-def detail(request, my_args):
-    post = Article.objects.all()[int(my_args)]
-    str = ("title = %s, category = %s, date_time = %s, content = %s" 
-        % (post.title, post.category, post.date_time, post.content))
-    return HttpResponse(str)
+# Create your models here.
+class Article(models.Model) :
+    title = models.CharField(max_length = 100)  #????
+    category = models.CharField(max_length = 50, blank = True)  #????
+    date_time = models.DateTimeField(auto_now_add = True)  #????
+    content = models.TextField(blank = True, null = True)  #??????
+
+    #python2??__unicode__, python3??__str__
+    def __str__(self) :
+        return self.title
+
+    class Meta:  #???????
+        ordering = ['-date_time']
