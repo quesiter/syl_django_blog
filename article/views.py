@@ -78,8 +78,4 @@ def home(request):
         post_list = paginator.page(1)
     except EmptyPage :
         post_list = paginator.paginator(paginator.num_pages)
-    return render(request, 'home.html', {'post_list' : post_list})
-~                                                                               
-~                                                                               
-~                                                                               
-~                                                                            
+    return render(request, 'home.html', {'post_list' : post_list})                                                                 
